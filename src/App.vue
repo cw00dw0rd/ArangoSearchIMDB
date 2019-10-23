@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="topLogo">
+    <img id="arangologo" alt="ArangoSearch logo" src="./assets/ArangoDBLogo.png">
+  </div>
+  <div class="imdb-container">
+    <h2>Use ArangoSearch to search the <img id="imdblogo" alt="IMDB logo" src="./assets/imdblogo.png"> dataset.</h2>
+  </div>
+    <Search />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Search from './components/Search.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Search
   }
 }
 </script>
@@ -23,6 +28,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 1px;
+}
+#arangologo {
+width: 600px;
+}
+#imdblogo {
+  width: 50px;
 }
 </style>
