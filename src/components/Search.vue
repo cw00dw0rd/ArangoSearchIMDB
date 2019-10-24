@@ -70,7 +70,7 @@ methods: {
   },
   searchData () {
     axios
-    .post("http://127.0.0.1:8529/_db/imdb/search/titlesearch", {"type": "Movie", "label": this.message, "genre": this.genre})
+    .post(process.env.VUE_APP_API_URL, {"type": "Movie", "label": this.message, "genre": this.genre})
     .then(response => {
       this.info = response.data
     })
